@@ -12,7 +12,12 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState) //Por medio de esta función, arranca la app
         setContent {
-            MessageCard(Message("Daniel", "Jetpack Compose")) //Esta función es creada por el usuario
+            MessageCard(
+                Message(
+                    "Daniel",
+                    "This is yout first app"
+                )
+            ) //Esta función es creada por el usuario
         } //setContent
     }//onCreate
 }//MainActivity
@@ -31,6 +36,6 @@ fun MessageCard(msg: Message) { //name is the argument
 @Composable
 fun PreviewMessageCard() {
     MessageCard(
-        msg = Message("Android","Hey, take a look at Jetpack Compose, it's great!")
+        msg = Message("Android", "Hey, take a look at Jetpack Compose, it's great!")
     )
 }
